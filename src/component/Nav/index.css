@@ -5,15 +5,24 @@ nav {
   padding-top: 3em;
 }
 
+.logo{
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
 a {
   text-decoration: none;
   color: #fff;
   position: relative;
-  padding: 10px 20px;
+  padding-right: 20px;
   overflow: hidden;
   cursor: pointer;
+  font-family: "Josefin Sans", sans-serif;
 }
-
+.nav_links-items {
+  font-weight: bold;
+}
 .nav_links-items::after {
   background-color: #fff;
   content: "";
@@ -27,5 +36,6 @@ a {
 
 .nav_links-items:hover::after {
   width: 50%;
- left: 25px;
+  left: 5px;
+  top: 20px;
 }

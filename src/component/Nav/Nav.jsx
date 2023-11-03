@@ -7,7 +7,7 @@ export const Navigation = () => {
     <div className="container">
       <nav>
         <div className="logo">
-          <Link to="/">GameStudios</Link>
+          <Link to="/">Gamestudios</Link>
         </div>
         <div className="nav_links">
           <Link to={`/`} className="nav_links-items">
