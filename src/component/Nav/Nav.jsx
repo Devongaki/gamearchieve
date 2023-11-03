@@ -19,6 +19,11 @@ export const Navigation = () => {
           <Link to="/about" className="nav_links-items">
             About
           </Link>
+          <Link to="/" className="nav_links-items">
+            SearchBox
+          </Link>
+          
+        
         </div>
       </nav>
     </div>

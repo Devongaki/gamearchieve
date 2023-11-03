@@ -16,7 +16,7 @@
 }
 
 .hero_section-sa{
-    height: 70vh;
+    height: 60vh;
 }
 
 .hero_heading{
@@ -33,4 +33,12 @@
     letter-spacing: .2rem;
     font-size: 50px;
     font-weight: 100;
+}
+
+
+
+
+.section-sb{
+    height: 70vh;
+    display: flex;
 }
