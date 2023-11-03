@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const GamesPage = () => {
+export const AboutPage = () => {
   return (
     <div className='container'>Page</div>
   )

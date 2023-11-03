@@ -1,0 +1,30 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2em;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  position: relative;
+  padding: 10px 20px;
+  overflow: hidden;
+}
+
+.nav_links-items::after {
+  background-color: red;
+  content: "";
+  width: 0;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  transition: width 0.35s ease 0s;
+  position: absolute;
+}
+
+.nav_links-items:hover::after {
+  width: 50%;
+ left: 25px;
+}
