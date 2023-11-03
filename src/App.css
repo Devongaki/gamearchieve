@@ -4,6 +4,12 @@
   margin: 0;
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .container {
   padding-right: 15px;
   padding-left: 15px;
@@ -26,4 +32,3 @@
     width: 1170px;
   }
 }
-
