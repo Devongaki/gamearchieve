@@ -88,6 +88,21 @@
   padding-top: 5em;
 }
 
+.sc_title h2{
+    font-family: var(--font-family);
+    text-transform: uppercase;
+}
+
+.sc_button button{
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 30px;
+    font-family: var(--font-family);
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+}
+
 .sc_card-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
