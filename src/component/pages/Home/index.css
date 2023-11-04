@@ -63,18 +63,19 @@
 .sb_info h2{
     width: 100%;
     font-family: var(--font-family);
-    font-size: 30px;
+    font-size: 40px;
     text-transform: uppercase;
     letter-spacing: .01em;
-    padding-top: 6em;
+    padding-top: 3em;
     line-height: 1.2em;
     
 }
 
 .sb_info p{
-    width: 90%;
+    width: 100%;
     padding-top: 1em;
     font-family: var(--font-family);
+    font-size: 18px;
     line-height: 1.3em;
 }
 
