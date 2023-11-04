@@ -1,3 +1,10 @@
+:root{
+    /* font family */
+    --font-family: "Josefin Sans", sans-serif;
+}
+
+
+
 .hero_img {
   position: absolute;
   top: 0;
@@ -23,7 +30,7 @@
   color: #fff;
   margin-top: 10em;
   border: 2px solid #fff;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: var(--font-family);
 }
 
 .hero_heading h1 {
@@ -36,7 +43,39 @@
 
 .section-sb {
   height: 70vh;
+}
+
+.sb-container {
+  position: relative;
   display: flex;
+}
+
+.sb_info {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  background-color: #ffffff;
+  padding-left: 5em;
+}
+
+
+.sb_info h2{
+    width: 100%;
+    font-family: var(--font-family);
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: .01em;
+    padding-top: 6em;
+    line-height: 1.2em;
+    
+}
+
+.sb_info p{
+    width: 90%;
+    padding-top: 1em;
+    font-family: var(--font-family);
+    line-height: 1.3em;
 }
 
 .sc_section {
@@ -57,26 +96,19 @@
   grid-row-gap: 14px;
 }
 
-
-
-
-
-
-
-.sd_footer-container{
-    position: absolute;
-    left: 0;
-    margin-top: auto;
-    width: 100%;
-    height: 20vh;
-    background-color: #000000;
-    color: #FFFFFF;
+.sd_footer-container {
+  position: absolute;
+  left: 0;
+  margin-top: auto;
+  width: 100%;
+  height: 20vh;
+  background-color: #000000;
+  color: #ffffff;
 }
 
-.top_footer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 3em;
+.top_footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 3em;
 }
-

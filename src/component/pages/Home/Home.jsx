@@ -16,23 +16,27 @@ export const HomePage = () => {
         </div>
         <div className="hero_heading">
           <h1>
-            Immersive<br></br>
-            experiences <br></br> that deliver
+            Immersive <br />
+            experiences <br /> that deliver
           </h1>
         </div>
       </div>
       <div className="section-sb">
-        <div className="sb-image">
-          <img src={sbImage} alt="" />
-        </div>
-        <div className="sb_info">
-          <h2>The leader in interactive VR</h2>
-          <p>
-            Founded in 2011, Loopstudios has been producing world-class virtual
-            reality projects for some of the best companies around the globe.
-            Our award-winning creations have transformed businesses through
-            digital experiences that bind to their brand.
-          </p>
+        <div className="sb-container">
+          <div className="sb-image">
+            <img src={sbImage} alt="" />
+          </div>
+          <div className="sb_info">
+            <h2>
+              The leader in <br /> interactive VR
+            </h2>
+            <p>
+              Founded in 2011, Loopstudios has been producing world-class
+              virtual reality projects for some of the best companies around the
+              globe. Our award-winning creations have transformed businesses
+              through digital experiences that bind to their brand.
+            </p>
+          </div>
         </div>
       </div>
 
