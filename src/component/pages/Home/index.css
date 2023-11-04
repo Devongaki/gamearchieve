@@ -1,9 +1,7 @@
-:root{
-    /* font family */
-    --font-family: "Josefin Sans", sans-serif;
+:root {
+  /* font family */
+  --font-family: "Josefin Sans", sans-serif;
 }
-
-
 
 .hero_img {
   position: absolute;
@@ -41,6 +39,7 @@
   font-weight: 100;
 }
 
+/* Section B styles starts here */
 .section-sb {
   height: 70vh;
 }
@@ -59,25 +58,25 @@
   padding-left: 5em;
 }
 
-
-.sb_info h2{
-    width: 100%;
-    font-family: var(--font-family);
-    font-size: 40px;
-    text-transform: uppercase;
-    letter-spacing: .01em;
-    padding-top: 3em;
-    line-height: 1.2em;
-    
+.sb_info h2 {
+  width: 100%;
+  font-family: var(--font-family);
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  padding-top: 3em;
+  line-height: 1.2em;
 }
 
-.sb_info p{
-    width: 100%;
-    padding-top: 1em;
-    font-family: var(--font-family);
-    font-size: 18px;
-    line-height: 1.3em;
+.sb_info p {
+  width: 100%;
+  padding-top: 1em;
+  font-family: var(--font-family);
+  font-size: 18px;
+  line-height: 1.3em;
 }
+
+/* Section c styles start */
 
 .sc_section {
   height: 100vh;
@@ -87,30 +86,85 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 5em;
+  padding-bottom: 5em;
 }
 
-.sc_title h2{
-    font-family: var(--font-family);
-    text-transform: uppercase;
+.sc_title h2 {
+  font-family: var(--font-family);
+  text-transform: uppercase;
 }
 
-.sc_button button{
-    background-color: #000000;
-    color: #fff;
-    padding: 10px 30px;
-    font-family: var(--font-family);
-    text-transform: uppercase;
-    font-weight: bold;
-    text-align: center;
+.sc_button button {
+  background-color: #000000;
+  color: #fff;
+  padding: 10px 30px;
+  font-family: var(--font-family);
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
 }
 
-.sc_card-container {
+.sc_card_display {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(3, 2fr) repeat(2, 1fr);
-  grid-column-gap: 20px;
-  grid-row-gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
 }
+
+.card {
+  position: relative;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  transition: 0.3s;
+  width: 100%; 
+  aspect-ratio: 1/1;
+}
+
+.card-content {
+  opacity: 1;
+  transition: 0.3s;
+  z-index: 2;
+}
+
+.card:hover .card-content {
+  opacity: 0;
+  z-index: -1;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.view-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.card:hover .view-button {
+  opacity: 1;
+}
+
+
+/* SD_ footer styles starts here */
 
 .sd_footer-container {
   position: absolute;

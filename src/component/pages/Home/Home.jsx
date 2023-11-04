@@ -50,8 +50,61 @@ export const HomePage = () => {
           </div>
         </div>
 
-        <div class="sc_card-container">
-          <div class="div1"> 111</div>
+        <div className="sc_card_display">
+          <div class="card">
+            <div class="card-content">
+              <h2>Game Title</h2>
+              <p>Description of the game goes here.</p>
+            </div>
+            <div class="view-button">
+              <a href="#">View Game</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <h2>Game Title</h2>
+              <p>Description of the game goes here.</p>
+            </div>
+            <div class="view-button">
+              <a href="#">View Game</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <h2>Game Title</h2>
+              <p>Description of the game goes here.</p>
+            </div>
+            <div class="view-button">
+              <a href="#">View Game</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <h2>Game Title</h2>
+              <p>Description of the game goes here.</p>
+            </div>
+            <div class="view-button">
+              <a href="#">View Game</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <h2>Game Title</h2>
+              <p>Description of the game goes here.</p>
+            </div>
+            <div class="view-button">
+              <a href="#">View Game</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <h2>Game Title</h2>
+              <p>Description of the game goes here.</p>
+            </div>
+            <div class="view-button">
+              <a href="#">View Game</a>
+            </div>
+          </div>
         </div>
       </div>
 
