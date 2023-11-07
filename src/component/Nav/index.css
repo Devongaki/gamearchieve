@@ -39,3 +39,9 @@ a {
   left: 5px;
   top: 20px;
 }
+
+.nav_links.open{
+  display: block;
+  background-color: #222;
+}
+

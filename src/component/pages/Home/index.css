@@ -25,18 +25,20 @@
 
 .hero_heading {
   width: 60%;
-  color: #fff;
   margin-top: 10em;
-  border: 2px solid #fff;
-  font-family: var(--font-family);
+  
 }
 
 .hero_heading h1 {
+  width: 100%;
   text-transform: uppercase;
   padding: 1em;
   letter-spacing: 0.2rem;
   font-size: 50px;
   font-weight: 100;
+  border: 2px solid #fff;
+  color: #fff;
+  font-family: var(--font-family);
 }
 
 /* Section B styles starts here */
@@ -164,15 +166,7 @@ p {
   opacity: 1;
 }
 
-@media (max-width: 768px) {
-  .sc_cont-heading {
-    flex-direction: column;
-  }
 
-  .sc_button {
-    padding-top: 20px; /* Add space between title and button */
-  }
-}
 
 
 /* SD_footer styles */
@@ -196,3 +190,40 @@ p {
   padding: 1em;
 }
 
+
+  @media screen and (max-width: 992px){
+
+    .hero_heading{
+      width: 100%;
+    }
+
+    .hero_heading h1{
+      width: 100%;
+    }
+  .section-sb {
+    height: auto;
+  }
+  .sb-container {
+    flex-direction: column;
+  }
+  .sb_info {
+    position: inherit;
+    width: 100%;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .sb-image img{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sc_cont-heading {
+    flex-direction: column;
+  }
+
+  .sc_button {
+    padding-top: 20px; 
+  }
+}

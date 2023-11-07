@@ -53,57 +53,57 @@ export const HomePage = () => {
           </div>
 
           <div className="sc_card_display">
-            <div class="card">
-              <div class="card-content">
+            <div className="card">
+              <div className="card-content">
                 <h2>Game Title</h2>
                 <p>Description of the game goes here.</p>
               </div>
-              <div class="view-button">
+              <div className="view-button">
                 <a href="#">View Game</a>
               </div>
             </div>
-            <div class="card">
-              <div class="card-content">
+            <div className="card">
+              <div className="card-content">
                 <h2>Game Title</h2>
                 <p>Description of the game goes here.</p>
               </div>
-              <div class="view-button">
+              <div className="view-button">
                 <a href="#">View Game</a>
               </div>
             </div>
-            <div class="card">
-              <div class="card-content">
+            <div className="card">
+              <div className="card-content">
                 <h2>Game Title</h2>
                 <p>Description of the game goes here.</p>
               </div>
-              <div class="view-button">
+              <div className="view-button">
                 <a href="#">View Game</a>
               </div>
             </div>
-            <div class="card">
-              <div class="card-content">
+            <div className="card">
+              <div className="card-content">
                 <h2>Game Title</h2>
                 <p>Description of the game goes here.</p>
               </div>
-              <div class="view-button">
+              <div className="view-button">
                 <a href="#">View Game</a>
               </div>
             </div>
-            <div class="card">
-              <div class="card-content">
+            <div className="card">
+              <div className="card-content">
                 <h2>Game Title</h2>
                 <p>Description of the game goes here.</p>
               </div>
-              <div class="view-button">
+              <div className="view-button">
                 <a href="#">View Game</a>
               </div>
             </div>
-            <div class="card">
-              <div class="card-content">
+            <div className="card">
+              <div className="card-content">
                 <h2>Game Title</h2>
                 <p>Description of the game goes here.</p>
               </div>
-              <div class="view-button">
+              <div className="view-button">
                 <a href="#">View Game</a>
               </div>
             </div>
