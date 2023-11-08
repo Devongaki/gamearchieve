@@ -24,7 +24,7 @@ nav .logo {
   font-size: 32px;
   font-weight: bold;
   text-transform: capitalize;
-  margin: 1rem;
+  margin: 1rem 0;
   text-decoration: none;
   color: #ffff;
 }

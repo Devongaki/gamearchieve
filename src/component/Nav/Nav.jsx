@@ -38,7 +38,7 @@ export const Navigation = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/" className="nav_links-items">
+            <NavLink to="/serachbox" className="nav_links-items">
               SearchBox
             </NavLink>
           </li>
