@@ -214,11 +214,25 @@ p {
 }
 
 @media screen and (max-width: 768px) {
+  .hero_heading{
+    width: 90%;
+  }
+
+  .hero_heading h1{
+    font-size: 40px;
+  }
   .sc_cont-heading {
     flex-direction: column;
   }
 
   .sc_button {
     padding-top: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .hero_heading h1 {
+    font-size: 36px;
   }
 }
