@@ -167,24 +167,6 @@ p {
   opacity: 1;
 }
 
-/* SD_footer styles */
-.sd_footer-container {
-  width: 100%;
-  background-color: #000000;
-  color: #ffffff;
-}
-
-.top_footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 3em;
-}
-
-.top_footer {
-  padding: 1em;
-}
-
 @media screen and (max-width: 980px) {
   .hero_heading {
     width: 60%;
