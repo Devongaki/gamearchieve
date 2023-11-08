@@ -1,47 +1,94 @@
+.active{
+  background-color: red;
+}
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 3em;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #000000;
 }
 
-.logo{
+nav .logo {
   font-size: 32px;
   font-weight: bold;
   text-transform: capitalize;
-}
-
-a {
+  margin: 1rem;
   text-decoration: none;
-  color: #fff;
-  position: relative;
-  padding-right: 20px;
-  overflow: hidden;
-  cursor: pointer;
-  font-family: "Josefin Sans", sans-serif;
-}
-.nav_links-items {
-  font-weight: bold;
-}
-.nav_links-items::after {
-  background-color: #fff;
-  content: "";
-  width: 0;
-  height: 3px;
-  left: 0;
-  bottom: 0;
-  transition: width 0.35s ease 0s;
-  position: absolute;
+  color: #ffff;
 }
 
-.nav_links-items:hover::after {
-  width: 50%;
-  left: 5px;
-  top: 20px;
+
+nav ul{
+  display: flex;
 }
 
-.nav_links.open{
+nav ul li{
+  list-style: none;
+}
+
+nav ul li a{
   display: block;
-  background-color: #222;
+  text-decoration: none;
+  color: #ffff;
+  padding: 0.5rem;
+  margin: 0 0.5rem;
+  border-radius: 0.05rem;
 }
 
+nav ul li a:not(.active):hover{
+  background-color: red;
+}
+
+nav .menu_btns{
+  display: flex;
+  position: absolute;
+  top: 1.55rem;
+  right: 0.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2.25rem;
+  height: 1.5rem;
+}
+
+nav .menu_btns span{
+  height: 0.3rem;
+  width: 100%;
+  background-color: #ffff;
+  border-radius: 0.2rem;
+}
+
+@media screen and (max-width: 900px) {
+  nav{
+    flex-direction: column;
+    align-items: start;
+  }
+
+  nav ul{
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 0.25rem;
+  }
+
+  nav ul.open{
+    display: flex;
+    
+  }
+
+  nav ul li{
+    width: 100%;
+  }
+  nav ul li a{
+    margin: 0.25rem 0.5rem;
+  }
+  /* nav .menu_btns{
+    display: flex;
+  } */
+
+  
+
+
+}
