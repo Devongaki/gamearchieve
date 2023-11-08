@@ -10,19 +10,20 @@ import { Link } from "react-router-dom";
 export const HomePage = () => {
   return (
     <>
-      {" "}
-      <div className="container">
-        <div className="hero_section-sa">
-          <div className="hero_img">
-            <img src={backgroundImage} alt="" />
-          </div>
-          <div className="hero_heading">
+      <div className="hero_section-sa">
+        <div className="hero_img">
+          <img src={backgroundImage} alt="" />
+        </div>
+        <div className="container">
+          <div className="hero_heading ">
             <h1>
               Immersive <br />
               experiences <br /> that deliver
             </h1>
           </div>
         </div>
+      </div>
+      <div className="container">
         <div className="section-sb">
           <div className="sb-container">
             <div className="sb-image">
