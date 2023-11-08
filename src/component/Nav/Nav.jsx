@@ -6,42 +6,44 @@ export const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav>
-      <Link to="/" className="logo">
-        Gamestudios
-      </Link>
-      <div
-        className="menu_btns"
-        onClick={() => {
-          setIsMenuOpen(!isMenuOpen);
-        }}
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <ul className={isMenuOpen ? "open" : ""}>
-        <li>
-          <NavLink to={`/`} className="nav_links-items">
-            Home
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to={`/games`} className="nav_links-items">
-            Games
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/about" className="nav_links-items">
-            About
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/" className="nav_links-items">
-            SearchBox
-          </NavLink>
-        </li>
-      </ul>
-    </nav>
+    <div className="nav_container">
+      <nav className="container">
+        <Link to="/" className="logo">
+          Gamestudios
+        </Link>
+        <div
+          className="menu_btns"
+          onClick={() => {
+            setIsMenuOpen(!isMenuOpen);
+          }}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul className={isMenuOpen ? "open" : ""}>
+          <li>
+            <NavLink to={`/`} className="nav_links-items">
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to={`/games`} className="nav_links-items">
+              Games
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/about" className="nav_links-items">
+              About
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/" className="nav_links-items">
+              SearchBox
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
+    </div>
   );
 };

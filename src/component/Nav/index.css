@@ -1,3 +1,12 @@
+
+.nav_container{
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #000000;
+  z-index: 100;
+}
 .active{
   background-color: red;
 }
@@ -8,7 +17,7 @@ nav {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: #000000;
+  
 }
 
 nav .logo {
@@ -43,7 +52,7 @@ nav ul li a:not(.active):hover{
 }
 
 nav .menu_btns{
-  display: flex;
+  display: none;
   position: absolute;
   top: 1.55rem;
   right: 0.5rem;
@@ -60,7 +69,7 @@ nav .menu_btns span{
   border-radius: 0.2rem;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 980px) {
   nav{
     flex-direction: column;
     align-items: start;
@@ -84,9 +93,9 @@ nav .menu_btns span{
   nav ul li a{
     margin: 0.25rem 0.5rem;
   }
-  /* nav .menu_btns{
+  nav .menu_btns{
     display: flex;
-  } */
+  }
 
   
 
