@@ -2,11 +2,12 @@
   font-size: 42px;
   line-height: 74px;
   font-weight: 700;
+  margin-bottom: 1em;
 }
 
 .game_searchBtn {
   width: 100%;
-  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .search_container {
