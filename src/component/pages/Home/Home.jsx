@@ -125,10 +125,22 @@ export const HomePage = () => {
             <div className="form-side">
               <form>
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required />
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="William Ongaki "
+                  required
+                />
 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required />
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="ongaki.dev@gmail.com"
+                  required
+                />
 
                 <button type="submit">Subscribe</button>
               </form>
@@ -136,7 +148,6 @@ export const HomePage = () => {
           </div>
         </div>
       </div>
-      <div className="sf_section newsletter_container"></div>
       <Footer />
     </>
   );
