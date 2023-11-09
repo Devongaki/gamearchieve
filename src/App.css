@@ -18,6 +18,11 @@
   --nav-text: #333333;
 }
 
+a{
+  text-decoration: none;
+  color: var(--background-dark);
+}
+
 body {
   min-height: 100%;
   display: flex;

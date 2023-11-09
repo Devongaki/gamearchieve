@@ -22,16 +22,21 @@ input {
   border-radius: 4px 0 0 4px;
 }
 
-.search_button {
-  padding: 10px;
-  background-color: #0077ff;
-  color: #fff;
-  border: 1px solid #0077ff;
-  border-radius: 0 4px 4px 0;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.games_filter {
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 1.5em;
 }
 
-.search_button:hover {
-  background-color: #0055cc;
+.games_filter label {
+  font-size: 16px;
+}
+
+#filter{
+    padding: 8px;
+}
+
+.load_gamesBtn{
+    text-align: center;
+    margin-bottom: 1em;
 }

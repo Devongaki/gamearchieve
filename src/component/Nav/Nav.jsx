@@ -37,11 +37,6 @@ export const Navigation = () => {
               About
             </NavLink>
           </li>
-          <li>
-            <NavLink to="/serachbox" className="nav_links-items">
-              SearchBox
-            </NavLink>
-          </li>
         </ul>
       </nav>
     </div>
