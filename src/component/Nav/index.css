@@ -4,18 +4,19 @@
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  background-color: #000000;
+  background-color:var(--nav-background);
+  position: sticky;
+  top: 0;
   z-index: 100;
 }
 .active{
-  background-color: red;
+  color: var(--accent-color);
 }
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
-  top: 0;
+  
   z-index: 100;
   
 }
@@ -26,7 +27,7 @@ nav .logo {
   text-transform: capitalize;
   margin: 1rem 0;
   text-decoration: none;
-  color: #ffff;
+  color: var(--nav-text);
 }
 
 
@@ -41,14 +42,15 @@ nav ul li{
 nav ul li a{
   display: block;
   text-decoration: none;
-  color: #ffff;
+  color: var(--nav-text);
   padding: 0.5rem;
   margin: 0 0.5rem;
   border-radius: 0.05rem;
+  font-size: 18px;
 }
 
 nav ul li a:not(.active):hover{
-  background-color: red;
+  color: var(--accent-color);
 }
 
 nav .menu_btns{
@@ -65,7 +67,7 @@ nav .menu_btns{
 nav .menu_btns span{
   height: 0.3rem;
   width: 100%;
-  background-color: #ffff;
+  background-color: var(--nav-text);
   border-radius: 0.2rem;
 }
 

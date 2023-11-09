@@ -111,27 +111,31 @@ export const HomePage = () => {
             </div>
           </div>
         </div>
-        <div className="sd_section mid_hero">
-          <div className="mid_content">
-            <div className="mid_info">
-              <h1>INSPIRED BY OUR SIMMERS</h1>
+      </div>
+      <div className="se_section news_container">
+        <div className="se_section news_container">
+          <div className="newsletter-content">
+            <div className="text-side">
+              <h2>Subscribe to Our Newsletter</h2>
               <p>
-                Meet our diverse community of talented players who make The Sims
-                every day and continuously inspire us to push the boundaries of
-                life and keep changing the status quo.
+                Stay updated with the latest news and updates by subscribing to
+                our newsletter.
               </p>
-              <button>learn more</button>
             </div>
-            <div className="mid_gallery">
-              <img src={midImage1} alt="" />
-              <img src={midImage2} alt="" />
-              <img src={midImage3} alt="" />
-              <img src={midImage4} alt="" />
+            <div className="form-side">
+              <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required />
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+
+                <button type="submit">Subscribe</button>
+              </form>
             </div>
           </div>
         </div>
       </div>
-      <div className="se_section news_container"></div>
       <div className="sf_section newsletter_container"></div>
       <Footer />
     </>
