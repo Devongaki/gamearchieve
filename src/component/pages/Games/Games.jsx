@@ -1,54 +1,43 @@
+// GamesPage.js
 import React, { useEffect, useState } from "react";
 import "./index.css";
 import { Footer } from "../../Footer/Footer";
-import { BaseUrl } from "../../urlPath";
-
-const options = {
-  method: "GET",
-  url: "https://free-to-play-games-database.p.rapidapi.com/api/filter",
-  params: {
-    tag: "3d.mmorpg.fantasy.pvp",
-    platform: "pc",
-  },
-  headers: {
-    "X-RapidAPI-Key": "4318904c87mshcf8fcdc984cadc9p1f8d99jsn9790322cce04",
-    "X-RapidAPI-Host": "free-to-play-games-database.p.rapidapi.com",
-  },
-};
+import { filterGames, handleInputChange } from "./FilterGames";
+import { fetchGames } from "./FetchGames";
 
 export const GamesPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedFilter, setSelectedFilter] = useState("genre");
   const [games, setGames] = useState([]);
+  const [gamesToDisplay, setGamesToDisplay] = useState(20);
+  const gamesPerPage = 10;
 
-  const handleSearchClick = () => {
-    console.log("Search clicked:", searchTerm);
-  };
-  const handleInputChange = (event) => {
-    setSearchTerm(event.target.value);
-  };
-
-  const handleFilterChange = (event) => {
-    setSelectedFilter(event.target.value);
-  };
-
-  const fetchGames = async () => {
-    try {
-      const resp = await fetch(BaseUrl, options);
-      const gamesData = await resp.json();
-
-      setGames(gamesData);
-    } catch (error) {
-      console.log("Error fetching games:", error);
-    }
-  };
-  useEffect(() => {
-    fetchGames();
-  }, []);
-
-  const filterGames = games.filter((game) =>
-    game.title.toLowerCase().includes(searchTerm.toLocaleLowerCase())
+  const { handleFilterChange, filteredGames } = filterGames(
+    games.slice(0, gamesToDisplay),
+    searchTerm,
+    setSelectedFilter
   );
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const gamesData = await fetchGames();
+      setGames(gamesData);
+    };
+
+    if (games.length === 0) {
+      fetchData();
+    }
+  }, [games]);
+
+ const truncateDescription = (description, maxLength) => {
+   return description.length > maxLength
+     ? `${description.slice(0, maxLength)}...read more`
+     : description;
+ };
+
+  const handleLoadMore = () => {
+    setGamesToDisplay((prevCount) => prevCount + gamesPerPage);
+  };
 
   return (
     <>
@@ -61,7 +50,7 @@ export const GamesPage = () => {
             type="text"
             placeholder="Search..."
             value={searchTerm}
-            onChange={handleInputChange}
+            onChange={(event) => handleInputChange(event, setSearchTerm)}
           />
         </div>
         <div className="games_filter">
@@ -78,26 +67,27 @@ export const GamesPage = () => {
         </div>
         <div className="games_display">
           <div className="sc_card_display">
-            {filterGames.map((game) => (
-              <div
-                className="card"
-                key={game.id}
-                style={{ backgroundImage: `url(${game.thumbnail})` }}
-              >
-                <div className="card-content-container">
-                  <h2>{game.title}</h2>
-                  <p>{game.short_description}</p>
-                  <div className="view-button">
-                    <a href="#">View Game</a>
+            {filteredGames.map((game) => (
+              <a key={game.id} href={`/game-details/${game.id}`}>
+                <div
+                  className="card"
+                  style={{ backgroundImage: `url(${game.thumbnail})` }}
+                >
+                  <div className="card-content-container">
+                    <h2>{game.title}</h2>
+                    <p>{truncateDescription(game.short_description, 50)}</p>
+                    <div className="view-button">
+                      <span>View Game</span>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
 
         <div className="load_gamesBtn">
-          <button>Load More</button>
+          <button onClick={handleLoadMore}>Load More</button>
         </div>
       </div>
 

@@ -1,7 +1,14 @@
-import React from 'react'
+import React from "react";
 
-export const GameInfo = () => {
+export const GameDetailsPage = ({ game }) => {
+  if (!game) {
+    return null;
+  }
   return (
-    <div>GameInfo</div>
-  )
-}
+    <div>
+      <h1>{game.title}</h1>
+      <img src={game.thumbnail} alt={game.title} />
+      <p>{game.short_description}</p>
+    </div>
+  );
+};
