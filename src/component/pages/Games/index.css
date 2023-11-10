@@ -38,6 +38,19 @@ input {
   margin: 0 auto;
   padding: 20px;
 }
+.navigation-link {
+  margin-bottom: 20px;
+}
+
+.navigation-link a {
+  text-decoration: none;
+  color: #3498db;
+  font-weight: bold;
+}
+
+.navigation-link a:hover {
+  text-decoration: underline;
+}
 
 .grid-container {
   display: grid;

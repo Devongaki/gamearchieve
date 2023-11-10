@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BaseUrl } from "../../urlPath";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { options } from "./FetchGames";
 
 export const GameDetailsPage = () => {
@@ -33,6 +33,9 @@ export const GameDetailsPage = () => {
 
   return (
     <div className="container">
+      <div className="navigation-link">
+        <Link to="/games">Back to Games</Link>
+      </div>
       <div className="grid-container">
         <div className="image-column">
           <img src={gameDetails.thumbnail} alt={gameDetails.title} />
