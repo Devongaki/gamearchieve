@@ -53,32 +53,18 @@ export const GamesPage = () => {
             onChange={(event) => handleInputChange(event, setSearchTerm)}
           />
         </div>
-        <div className="games_filter">
-          <select
-            id="filter"
-            value={selectedFilter}
-            onChange={handleFilterChange}
-          >
-            <option value="genre">Genre</option>
-            <option value="ratings">Ratings</option>
-            <option value="name">Name</option>
-            <option value="releaseDate">Release Date</option>
-          </select>
-        </div>
         <div className="games_display">
           <div className="sc_card_display">
             {filteredGames.map((game) => (
               <a key={game.id} href={`/game-details/${game.id}`}>
-                <div
-                  className="card"
-                  style={{ backgroundImage: `url(${game.thumbnail})` }}
-                >
+                <div className="card">
+                  <div
+                    className="card-image"
+                    style={{ backgroundImage: `url(${game.thumbnail})` }}
+                  />
                   <div className="card-content-container">
                     <h2>{game.title}</h2>
                     <p>{truncateDescription(game.short_description, 50)}</p>
-                    <div className="view-button">
-                      <span>View Game</span>
-                    </div>
                   </div>
                 </div>
               </a>

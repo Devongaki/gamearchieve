@@ -77,16 +77,14 @@ export const HomePage = () => {
           <div className="sc_card_display">
             {games.slice(0, gamesToDisplay).map((game) => (
               <a key={game.id} href={`/game-details/${game.id}`}>
-                <div
-                  className="card"
-                  style={{ backgroundImage: `url(${game.thumbnail})` }}
-                >
+                <div className="card">
+                  <div
+                    className="card-image"
+                    style={{ backgroundImage: `url(${game.thumbnail})` }}
+                  />
                   <div className="card-content-container">
                     <h2>{game.title}</h2>
                     <p>{truncateDescription(game.short_description, 50)}</p>
-                    <div className="view-button">
-                      <span>View Game</span>
-                    </div>
                   </div>
                 </div>
               </a>
