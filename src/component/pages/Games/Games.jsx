@@ -46,6 +46,10 @@ export const GamesPage = () => {
     fetchGames();
   }, []);
 
+  const filterGames = games.filter((game) =>
+    game.title.toLowerCase().includes(searchTerm.toLocaleLowerCase())
+  );
+
   return (
     <>
       <div className="container">
@@ -74,7 +78,7 @@ export const GamesPage = () => {
         </div>
         <div className="games_display">
           <div className="sc_card_display">
-            {games.map((game) => (
+            {filterGames.map((game) => (
               <div
                 className="card"
                 key={game.id}

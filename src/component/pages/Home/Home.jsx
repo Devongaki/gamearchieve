@@ -3,10 +3,6 @@ import "./index.css";
 import backgroundImage from "../../../assets/images/desktop/image-hero.jpg";
 import sbImage from "../../../assets/images/desktop/image-interactive.jpg";
 import { Footer } from "../../Footer/Footer";
-import midImage1 from "../../../assets/images/mid-hero 1.jpeg";
-import midImage2 from "../../../assets/images/mid2.jpg";
-import midImage3 from "../../../assets/images/mid3.jpg";
-import midImage4 from "../../../assets/images/mid4.jpg";
 
 export const HomePage = () => {
   return (
