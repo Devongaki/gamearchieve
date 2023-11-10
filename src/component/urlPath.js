@@ -1,1 +1,1 @@
-export const BaseUrl ="https://free-to-play-games-database.p.rapidapi.com/api/filter?tag=3d.mmorpg.fantasy.pvp&platform=pc";
+export const BaseUrl ="https://free-to-play-games-database.p.rapidapi.com/api/";
