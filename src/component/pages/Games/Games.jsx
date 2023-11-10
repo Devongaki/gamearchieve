@@ -1,22 +1,14 @@
-// GamesPage.js
 import React, { useEffect, useState } from "react";
 import "./index.css";
 import { Footer } from "../../Footer/Footer";
-import { filterGames, handleInputChange } from "./FilterGames";
 import { fetchGames } from "./FetchGames";
+import { filterGames, handleInputChange } from "./FilterGames";
 
 export const GamesPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [selectedFilter, setSelectedFilter] = useState("genre");
   const [games, setGames] = useState([]);
   const [gamesToDisplay, setGamesToDisplay] = useState(20);
   const gamesPerPage = 10;
-
-  const { handleFilterChange, filteredGames } = filterGames(
-    games.slice(0, gamesToDisplay),
-    searchTerm,
-    setSelectedFilter
-  );
 
   useEffect(() => {
     const fetchData = async () => {
@@ -29,11 +21,16 @@ export const GamesPage = () => {
     }
   }, [games]);
 
- const truncateDescription = (description, maxLength) => {
-   return description.length > maxLength
-     ? `${description.slice(0, maxLength)}...read more`
-     : description;
- };
+  const { filteredGames } = filterGames(
+    games.slice(0, gamesToDisplay),
+    searchTerm
+  );
+
+  const truncateDescription = (description, maxLength) => {
+    return description.length > maxLength
+      ? `${description.slice(0, maxLength)}...read more`
+      : description;
+  };
 
   const handleLoadMore = () => {
     setGamesToDisplay((prevCount) => prevCount + gamesPerPage);
