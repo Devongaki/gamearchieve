@@ -1,10 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./index.css";
 import backgroundImage from "../../../assets/images/desktop/image-hero.jpg";
 import sbImage from "../../../assets/images/desktop/image-interactive.jpg";
 import { Footer } from "../../Footer/Footer";
+import { fetchGames } from "../Games/FetchGames";
 
 export const HomePage = () => {
+  const [games, setGames] = useState([]);
+  const gamesToDisplay = 10;
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const gamesData = await fetchGames();
+      setGames(gamesData);
+    };
+
+    if (games.length === 0) {
+      fetchData();
+    }
+  }, [games]);
+
+
+  const truncateDescription = (description, maxLength) => {
+    return description.length > maxLength
+      ? `${description.slice(0, maxLength)}...read more`
+      : description;
+  };
+
   return (
     <>
       <div className="hero_section-sa">
@@ -46,65 +69,28 @@ export const HomePage = () => {
               <h2>Our Games</h2>
             </div>
             <div className="sc_button">
-              <button>See all</button>
+              <Link to="/games">
+                <button>See all</button>
+              </Link>
             </div>
           </div>
-
           <div className="sc_card_display">
-            <div className="card">
-              <div className="card-content">
-                <h2>Game Title</h2>
-                <p>Description of the game goes here.</p>
-              </div>
-              <div className="view-button">
-                <a href="#">View Game</a>
-              </div>
-            </div>
-            <div className="card">
-              <div className="card-content">
-                <h2>Game Title</h2>
-                <p>Description of the game goes here.</p>
-              </div>
-              <div className="view-button">
-                <a href="#">View Game</a>
-              </div>
-            </div>
-            <div className="card">
-              <div className="card-content">
-                <h2>Game Title</h2>
-                <p>Description of the game goes here.</p>
-              </div>
-              <div className="view-button">
-                <a href="#">View Game</a>
-              </div>
-            </div>
-            <div className="card">
-              <div className="card-content">
-                <h2>Game Title</h2>
-                <p>Description of the game goes here.</p>
-              </div>
-              <div className="view-button">
-                <a href="#">View Game</a>
-              </div>
-            </div>
-            <div className="card">
-              <div className="card-content">
-                <h2>Game Title</h2>
-                <p>Description of the game goes here.</p>
-              </div>
-              <div className="view-button">
-                <a href="#">View Game</a>
-              </div>
-            </div>
-            <div className="card">
-              <div className="card-content">
-                <h2>Game Title</h2>
-                <p>Description of the game goes here.</p>
-              </div>
-              <div className="view-button">
-                <a href="#">View Game</a>
-              </div>
-            </div>
+            {games.slice(0, gamesToDisplay).map((game) => (
+              <a key={game.id} href={`/game-details/${game.id}`}>
+                <div
+                  className="card"
+                  style={{ backgroundImage: `url(${game.thumbnail})` }}
+                >
+                  <div className="card-content-container">
+                    <h2>{game.title}</h2>
+                    <p>{truncateDescription(game.short_description, 50)}</p>
+                    <div className="view-button">
+                      <span>View Game</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            ))}
           </div>
         </div>
       </div>
@@ -120,7 +106,7 @@ export const HomePage = () => {
             </div>
             <div className="form-side">
               <form>
-                <label for="name">Name:</label>
+                <label htmlFor="name">Name:</label>
                 <input
                   type="text"
                   id="name"
@@ -129,7 +115,7 @@ export const HomePage = () => {
                   required
                 />
 
-                <label for="email">Email:</label>
+                <label htmlFor="email">Email:</label>
                 <input
                   type="email"
                   id="email"
