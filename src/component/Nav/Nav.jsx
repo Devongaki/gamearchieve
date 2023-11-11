@@ -32,11 +32,6 @@ export const Navigation = () => {
               Games
             </NavLink>
           </li>
-          <li>
-            <NavLink to="/about" className="nav_links-items">
-              About
-            </NavLink>
-          </li>
         </ul>
       </nav>
     </div>
