@@ -32,14 +32,13 @@ export const Navigation = () => {
               Games
             </NavLink>
           </li>
-        
-            <li>
-              <NavLink
-                to={`/game-details`}
-                className="nav_links-items"
-              >
-              </NavLink>
-            </li>
+
+          <li>
+            <NavLink
+              to={`/game-details/:gameId`}
+              className="nav_links-items"
+            ></NavLink>
+          </li>
         </ul>
       </nav>
     </div>
