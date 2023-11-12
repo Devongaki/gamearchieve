@@ -15,6 +15,7 @@ export const GameDetailsPage = () => {
         const detailsData = await response.json();
         setGameDetails(detailsData);
         setLoading(false);
+        console.log(detailsData);
       } catch (error) {
         console.error(
           `Error fetching game details for game ID ${gameId}:`,
