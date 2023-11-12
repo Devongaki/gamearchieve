@@ -36,10 +36,7 @@ export const HomePage = () => {
         </div>
         <div className="container">
           <div className="hero_heading ">
-            <h1>
-              Immersive <br />
-              experiences <br /> that deliver
-            </h1>
+            <h1>DIVE INTO THE <br /> GAMING REALM</h1>
           </div>
         </div>
       </div>
@@ -51,13 +48,14 @@ export const HomePage = () => {
             </div>
             <div className="sb_info">
               <h2>
-                The leader in <br /> interactive VR
+                THE PIONEER IN <br /> IMMERSIVE GAMING
               </h2>
               <p>
-                Founded in 2011, Loopstudios has been producing world-class
-                virtual reality projects for some of the best companies around
-                the globe. Our award-winning creations have transformed
-                businesses through digital experiences that bind to their brand.
+                Established in 2023, gamesstudios has been at the forefront of
+                crafting cutting-edge gaming experiences for premier companies
+                worldwide. Our acclaimed creations have revolutionized the
+                gaming industry, delivering unparalleled digital adventures that
+                seamlessly integrate with the essence of each gaming brand
               </p>
             </div>
           </div>

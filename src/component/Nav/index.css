@@ -56,7 +56,7 @@ nav ul li a:not(.active):hover{
 nav .menu_btns{
   display: none;
   position: absolute;
-  top: 1.55rem;
+  top: 2.85rem;
   right: 0.5rem;
   flex-direction: column;
   justify-content: space-between;
